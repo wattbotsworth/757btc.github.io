@@ -1,50 +1,31 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: 757btc.org
 email: 757btc.org@proton.me
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Collaborating and educating on Bitcoin, Nostr and Freedom Tech in Hampton Roads Virginia. We announce our meetings at the beginning of each month and meet on the 2nd Saturday of each month.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.757btc.org" # the base hostname & protocol for your site, e.g. http://example.com
-avatar: assets/img/757circlenostr02-alpha.png
-color_image: assets/img/lineart.png
-github_username:  757btc
-header_feature_image: assets/img/mermaid-bg.png
-header_feature_image_responsive: true
-header_text: Collaborating and Educating on Bitcoin, Nostr and Freedom Tech in Hampton Roads Virginia
-color_theme: auto
+baseurl: ""
+url: "https://www.757btc.org"
+github_username: 757btc
+
+# Theme settings
 excerpt: true
+post_navigation: true
 
 # Build settings
 markdown: kramdown
-remote_theme: sylhare/Type-on-Strap
-post_navigation: true
 paginate: 10
 paginate_path: "posts/page:num"
-plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-feed
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Include .well-known for Nostr verification
 include: [".well-known"]
+
+# Exclude reference material and dev files
+exclude:
+  - reference
+  - Gemfile
+  - Gemfile.lock
+  - README.md
