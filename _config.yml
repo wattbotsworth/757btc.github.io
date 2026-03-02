@@ -20,6 +20,16 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
 
+exclude:
+  - AGENTS.md
+  - Gemfile
+  - Gemfile.lock
+  - reference
+  - README.md
+
+include:
+  - .well-known
+
 # Include .well-known for Nostr verification
 include: [".well-known"]
 
