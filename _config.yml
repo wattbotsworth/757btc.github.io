@@ -35,7 +35,6 @@ cypherpunk:
 
 # Build settings
 markdown: kramdown
-remote_theme: wattbotsworth/cypherpunk-jekyll-theme
 post_navigation: true
 paginate: 10
 paginate_path: "posts/page:num"

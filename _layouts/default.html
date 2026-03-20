@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body{% unless site.cypherpunk.crt == false %} class="crt-enabled"{% endunless %}>
+  <div class="site-wrapper">
+    {% include header.html %}
+    <main class="content">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
+</body>
+</html>
